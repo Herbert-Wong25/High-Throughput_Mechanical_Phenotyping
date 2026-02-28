@@ -46,3 +46,14 @@ The final stage translates binary masks into biophysical parameters.
 * **Quality Control:** Implements a **90% Confidence Interval (CI)** area filter to exclude cell clumps and debris, ensuring statistical rigor across genotypes.
 
 ---
+
+## 📊 Results & Biological Interpretation
+
+The integration of high-speed data engineering (FIJI) and deep-learning-based feature extraction (Python) allowed for a robust mechanical characterization of cell populations.
+
+* **Data Engineering Efficiency (Part A):** The automated "pixel-intensity gate" achieved a **90.5% reduction in data volume** (from 11 GB to 1.04 GB). By retaining 33,750 high-interest frames, the pipeline enabled a 10-fold increase in processing speed for downstream segmentation without losing single-cell events.
+* **Mechanical Role of Cytoskeletal Protein X:** Quantitative analysis revealed that Protein X is a primary regulator of cortical stiffness and structural integrity in the studied cancer cell line.
+* **OE (Over-expression) Phenotype:** Cells with over-expressed Protein X exhibited **significantly lower deformation** and higher circularity. This suggests a reinforced cytoskeletal network that increases cellular stiffness, making the cells more resistant to microfluidic shear stress.
+* **KD (Knock-down) Phenotype:** Conversely, the knock-down population showed a shift toward **higher deformation values** and reduced roundness. This mechanical softening indicates a compromise in structural support, likely due to a weakened actin-myosin cortex or reduced cross-linking.
+* **High-Throughput Statistical Rigor:** By applying a 90% Confidence Interval (CI) filter to the extracted features, we successfully isolated core populations from biological noise, confirming that mechanical phenotyping can serve as a reliable, label-free proxy for protein-driven structural changes.
+
