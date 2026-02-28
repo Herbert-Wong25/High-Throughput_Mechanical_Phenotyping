@@ -19,3 +19,30 @@ This project specifically targets:
 * **Core Libraries:** `pandas`, `numpy`, `scikit-image`, `scipy`, `matplotlib`, `seaborn`
 
 ---
+
+## 🚀 The Pipeline & Script Evolution
+
+### Part 1: High-Speed Data Reduction (FIJI)
+
+High-speed RT-DC generates data at a rate that can quickly overwhelm storage and processing power.
+
+* **Script:** `RT-DC_Data_Reduction.ijm`
+* **Method:** Implements a **"pixel-intensity gate"** within the microfluidic detection zone.
+* **Impact:** Reduced a raw 11GB dataset to **1.04GB**, achieving a **10x data reduction factor** by automatically discarding frames without cell events.
+
+### Part 2: Deep Learning Segmentation (Omnipose)
+
+To obtain accurate mechanical measurements from deformed cells, high-fidelity boundary detection is required.
+
+* **Notebook:** `01_Cell_Segmentation_Omnipose.ipynb`
+* **Method:** Utilizes the `bact_phase_omni` model to generate 16-bit labeled masks from high-speed image sequences. This model is optimized for the phase-contrast signatures found in microfluidic channels.
+
+### Part 3: Mechanical Feature Extraction (Python)
+
+The final stage translates binary masks into biophysical parameters.
+
+* **Notebook:** `02_Mechanical_Feature_Extraction.ipynb`
+* **Analysis:** Calculates **Area**, **Circularlity**, and **Deformation ($D$)**.
+* **Quality Control:** Implements a **90% Confidence Interval (CI)** area filter to exclude cell clumps and debris, ensuring statistical rigor across genotypes.
+
+---
