@@ -79,3 +79,28 @@ $$D = 1 - \frac{2\sqrt{\pi \cdot \text{Area}}}{\text{Perimeter}}$$
 
 ---
 
+## ⚙️ Setup & Installation
+
+### 1. Data Reduction (FIJI)
+
+1. Install [FIJI](https://fiji.sc/).
+2. Run `RT-DC_Data_Reduction.ijm` on your raw `.tif` stacks to generate the compactified dataset.
+
+### 2. Analysis Environment (Python)
+
+```bash
+# Create environment
+conda create -n rtdc_phenotype python=3.10
+conda activate rtdc_phenotype
+
+# Install dependencies
+pip install omnipose cellpose pandas scikit-image seaborn
+
+```
+
+---
+
+## ✉️ Contact
+
+For questions regarding the RT-DC pipeline or data reduction logic, please contact ** (Herbert)Siu-Ho Wong** at [herbert.wong150@gmail.com].
+
