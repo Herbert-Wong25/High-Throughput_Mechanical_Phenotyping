@@ -57,3 +57,25 @@ The integration of high-speed data engineering (FIJI) and deep-learning-based fe
 * **KD (Knock-down) Phenotype:** Conversely, the knock-down population showed a shift toward **higher deformation values** and reduced roundness. This mechanical softening indicates a compromise in structural support, likely due to a weakened actin-myosin cortex or reduced cross-linking.
 * **High-Throughput Statistical Rigor:** By applying a 90% Confidence Interval (CI) filter to the extracted features, we successfully isolated core populations from biological noise, confirming that mechanical phenotyping can serve as a reliable, label-free proxy for protein-driven structural changes.
 
+---
+
+## ⚒️ Key Quantitative Metrics
+
+The pipeline calculates Deformation ($D$) as the primary mechanical indicator:
+
+$$D = 1 - \frac{2\sqrt{\pi \cdot \text{Area}}}{\text{Perimeter}}$$
+
+* **$D = 0$**: Perfectly spherical/circular cell (low stress).
+* **High $D$**: Significant deformation, indicating increased cell softness or high fluid shear response.
+
+---
+
+## 📂 Project Structure
+
+* **`/macros`**: FIJI scripts for high-speed frame filtering and data compactification.
+* **`/notebooks`**: Jupyter notebooks for Omnipose segmentation and mechanical feature extraction.
+* **`/data`**: (Blueprint only) Standardized structure for `/raw` and `/processed` high-speed image sequences.
+* **`requirements.txt`**: Python dependencies for the Omnipose and Analysis environment.
+
+---
+
