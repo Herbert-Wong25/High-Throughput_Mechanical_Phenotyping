@@ -1,0 +1,25 @@
+# RT-DC Mechanical Phenotyping — Python Dependencies
+# Install with: pip install -r requirements.txt
+#
+# Tested on Python 3.10
+# Note: cellpose-omni installs cellpose_omni and omnipose as a bundle.
+
+# Segmentation (Part C)
+cellpose-omni
+omnipose
+
+# Image I/O & processing (Parts C & D)
+scikit-image
+
+# Numerical computing (Parts C & D)
+numpy
+
+# Data manipulation & export (Part D)
+pandas
+
+# Scientific computing — used for stats (Part D)
+scipy
+
+# Visualisation (Parts C & D)
+matplotlib
+seaborn
